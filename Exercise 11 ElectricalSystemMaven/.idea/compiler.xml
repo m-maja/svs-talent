@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="application" />
+        <module name="fan" />
+        <module name="lamp" />
+        <module name="powerbutton" />
+        <module name="powerbuttonfanadapter" />
+        <module name="powerbuttonlampadapter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="application" target="1.6" />
+      <module name="Exercise 11 ElectricalSystemMaven" target="1.5" />
+      <module name="fan" target="1.5" />
+      <module name="lamp" target="1.5" />
+      <module name="powerbutton" target="1.5" />
+      <module name="powerbuttonfanadapter" target="1.6" />
+      <module name="powerbuttonlampadapter" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
