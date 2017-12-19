@@ -8,20 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MainController {
+public class ConsoleController {
     private ConsoleTweetReaderAdapter consoleTweetReaderAdapter;
     private TweetRepository tweetRepository;
     private UserRepository userRepository;
 
     @Autowired
-    public MainController(TweetRepository tweetRepository, UserRepository userRepository) {
+    public ConsoleController(TweetRepository tweetRepository, UserRepository userRepository) {
         this.userRepository = userRepository;
         this.consoleTweetReaderAdapter = new ConsoleTweetReaderAdapter();
         this.tweetRepository = tweetRepository;
     }
 
     public void startApplication (){
-        int action = 1;
+        int action;
 
         do {
             System.out.println("= Enter your action: = \n" +

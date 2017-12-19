@@ -3,6 +3,10 @@ package com.seavus.twitter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class that keeps the tweets
+ */
+@Deprecated
 public class TweetHolder {
     List<Tweet> tweets;
 

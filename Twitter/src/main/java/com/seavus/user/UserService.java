@@ -48,4 +48,8 @@ public class UserService {
         User unfollow = getUserById(id2);
         user.unfollowUser(unfollow);
     }
+
+    public User getUserByUsername(String username) {
+        return  userRepository.findByUsername(username);
+    }
 }

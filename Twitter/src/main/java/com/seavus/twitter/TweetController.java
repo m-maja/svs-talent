@@ -19,7 +19,7 @@ public class TweetController {
     }
 
     @PostMapping
-    public void saveTweet(@RequestBody(required = false) Tweet tweet){
+    public void saveTweet(@RequestBody Tweet tweet){
         if (tweet == null)
             tweet = new Tweet();
         tweetService.saveTweet(tweet);

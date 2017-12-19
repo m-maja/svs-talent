@@ -99,4 +99,12 @@ public class User {
     public boolean unfollowUser(User unfollow) {
         return followingUsers.remove(unfollow);
     }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public List<User> getFollowingUsers() {
+        return followingUsers;
+    }
 }

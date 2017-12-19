@@ -13,10 +13,13 @@ public class Tweet {
 
     @Id @GeneratedValue
     private long id;
+
     @ManyToOne
     @JsonBackReference
     private User user;
+
     private String content;
+
     private int numberOfCharacters;
 
     public Tweet() {
