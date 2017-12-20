@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RequestMapping("/users")
 public class UserController {
     private UserService userService;
@@ -16,7 +17,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/user/{id}")
     public User getUserById(@PathVariable Long id){
         return userService.getUserById(id);
     }
@@ -54,5 +55,10 @@ public class UserController {
     @PutMapping("/{id}/unfollow/{id2}")
     public void unfollowUser(@PathVariable Long id, @PathVariable Long id2){
         userService.unfollowUser(id, id2);
+    }
+
+    @PostMapping("/{id}/tweets")
+    public void addTweetToUserWithId(@PathVariable long id, @RequestBody Tweet tweet){
+        userService.addTweetToUserWithId(id, tweet);
     }
 }

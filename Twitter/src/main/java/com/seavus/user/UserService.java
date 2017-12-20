@@ -1,6 +1,7 @@
 package com.seavus.user;
 
 import com.seavus.twitter.Tweet;
+import com.seavus.twitter.TweetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +10,12 @@ import java.util.List;
 @Service
 public class UserService {
     private UserRepository userRepository;
+    private TweetRepository tweetRepository;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, TweetRepository tweetRepository) {
         this.userRepository = userRepository;
+        this.tweetRepository = tweetRepository;
     }
 
     public User saveUser(User user){
@@ -51,5 +54,11 @@ public class UserService {
 
     public User getUserByUsername(String username) {
         return  userRepository.findByUsername(username);
+    }
+
+    public void addTweetToUserWithId(long id, Tweet tweet) {
+        User user = getUserById(id);
+        tweet.addUser(user);
+        tweetRepository.save(tweet);
     }
 }

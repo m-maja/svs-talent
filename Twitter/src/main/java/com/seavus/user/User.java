@@ -22,7 +22,7 @@ public class User {
     private String lastName;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @JsonBackReference
     private List<Tweet> tweets;
 
     @ManyToMany(fetch = FetchType.EAGER)

@@ -1,6 +1,6 @@
 package com.seavus.twitter;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.seavus.user.User;
 
 import javax.persistence.Entity;
@@ -15,7 +15,7 @@ public class Tweet {
     private long id;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonManagedReference
     private User user;
 
     private String content;
