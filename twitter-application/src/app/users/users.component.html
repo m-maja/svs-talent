@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let user of users">
+    <span class="badge">Followers: {{user.followers.length}}</span>
+    {{user.username}}
+  </li>
+</ul>

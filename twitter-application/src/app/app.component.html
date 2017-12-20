@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<ul class="nav nav-tabs">
+    <li role="presentation" (click)="showLogIn()">
+        <a href="#">Log in</a>
+      </li>
+  <li role="presentation" (click)="showAllUsers()">
+    <a href="#">Users</a>
+  </li>
+  <li role="presentation" (click)="showAllTweets()"> 
+    <a href="#">All tweets </a>
+  <li role="presentation" (click)="showMyTweets()">
+    <a href="#">My profile</a>
+  </li>
+</ul>
+
+<div id="users">
+  <app-users></app-users>
+</div>
+<div id="tweets">
+  <app-tweets></app-tweets>
+</div>
+<div id="my-tweets">
+  <app-my-tweets></app-my-tweets>
+</div>
+<div id="log-in">
+    <app-log-in></app-log-in>
+</div>
+
